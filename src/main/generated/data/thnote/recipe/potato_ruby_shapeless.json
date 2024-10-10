@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "potato_ruby",
+  "ingredients": [
+    {
+      "item": "thnote:ruby"
+    },
+    {
+      "item": "minecraft:potato"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "thnote:potato_ruby"
+  }
+}

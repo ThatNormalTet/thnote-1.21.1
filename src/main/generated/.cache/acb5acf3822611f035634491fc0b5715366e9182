@@ -1,0 +1,22 @@
+// 1.21.1	2024-10-10T12:26:48.0390915	Thnote/Model Definitions
+bd6528c24ddb5f2ab5d1a8344e7641545d13fd40 assets\thnote\blockstates\ruby_block.json
+947f1f4ee990ea052407ca164aefa0a9ef910244 assets\thnote\blockstates\ruby_ore.json
+779b5b32c7d74286229be329deb74315379b5af7 assets\thnote\models\item\potato_ruby.json
+bc4f969fdf3cdc7a6dfadfd8a332285ede1b8d83 assets\thnote\blockstates\potato_ruby_block.json
+160e7ee1486e2840b43f36da6157c674da0818ce assets\thnote\models\block\ruby_ore.json
+00f5f938839057c4ff5e525b6b01afbf7ba44fa6 assets\thnote\blockstates\deepslate_ruby_ore.json
+90799ca28b0771c8de509be235304ffadd518d76 assets\thnote\blockstates\crystalizer.json
+16eab87e076b97171bfedad35fa8b4dd98814f90 assets\thnote\models\item\condensed_ruby.json
+f50db886f6d96958a6542312e26384e7e9a5ea24 assets\thnote\models\block\crystalizer.json
+031460a08201c6eb5ba5bda89ecfa5362c666993 assets\thnote\models\item\ruby_block.json
+f80a0f2c323d93314e09d8533b403583339a23b9 assets\thnote\models\item\potato_ruby_block.json
+9cf1f1c7625fd80ed5a313eefba93554e88621e9 assets\thnote\models\item\ruby.json
+d5fbfa0a6ed2805aae3a1b2aa8eef68aaf1ba049 assets\thnote\blockstates\oremizer.json
+ce60da2bdd2577267addbf5691504c1a7458d6f8 assets\thnote\models\block\oremizer.json
+150593e0cb54601a960e29bffbaf2e0f4a1c144c assets\thnote\models\item\oremizer.json
+aab0f317f4c196752004bf24e92535dcb2645c22 assets\thnote\models\block\potato_ruby_block.json
+78fe982fabe06df76cd3177270f92ddfec4de66e assets\thnote\models\item\ruby_ore.json
+d01166a830fa305c85afd2534e2bb04cc0404446 assets\thnote\models\block\ruby_block.json
+357c297c95808f0cea93fb2d4823c00c8310efbc assets\thnote\models\item\deepslate_ruby_ore.json
+faa0c1dc34770d7d09c7ca5438327ef344aa4bbf assets\thnote\models\item\crystalizer.json
+348d4e89fc11d069a87e56bfdb9d80920fcacbfc assets\thnote\models\block\deepslate_ruby_ore.json

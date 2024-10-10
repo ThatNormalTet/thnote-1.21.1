@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_condensed_ruby": {
+      "conditions": {
+        "items": [
+          {
+            "items": "thnote:condensed_ruby"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ruby": {
+      "conditions": {
+        "items": [
+          {
+            "items": "thnote:ruby"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "thnote:ruby_from_condensed_ruby"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ruby",
+      "has_condensed_ruby"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "thnote:ruby_from_condensed_ruby"
+    ]
+  }
+}

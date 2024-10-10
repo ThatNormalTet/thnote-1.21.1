@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "ruby",
+  "ingredients": [
+    {
+      "item": "thnote:condensed_ruby"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "thnote:ruby"
+  }
+}

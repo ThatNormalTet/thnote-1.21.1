@@ -1,0 +1,25 @@
+package com.thnote.thnotemod.screens;
+
+import com.thnote.thnotemod.Thnote;
+import com.thnote.thnotemod.screens.crystalizer.CrystallizerScreenHandler;
+import com.thnote.thnotemod.screens.oremizer.OremizerScreenHandler;
+import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerType;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+
+public class ModScreenHandlers {
+    public static final ScreenHandlerType<CrystallizerScreenHandler> CRYSTALLIZER_SCREEN_HANDLER =
+            Registry.register(Registries.SCREEN_HANDLER, Identifier.of(Thnote.MOD_ID, "crystallizer_screen_handler"),
+                    new ExtendedScreenHandlerType<>(CrystallizerScreenHandler::new, BlockPos.PACKET_CODEC));
+
+    public static final ScreenHandlerType<OremizerScreenHandler> OREMIZER_SCREEN_HANDLER =
+            Registry.register(Registries.SCREEN_HANDLER, Identifier.of(Thnote.MOD_ID, "oremizer_screen_handler"),
+                    new ExtendedScreenHandlerType<>(OremizerScreenHandler::new, BlockPos.PACKET_CODEC));
+
+    public static void registerScreenHandlers() {
+        Thnote.LOGGER.info("Registering Screen Handlers for " + Thnote.MOD_ID);
+    }
+}
