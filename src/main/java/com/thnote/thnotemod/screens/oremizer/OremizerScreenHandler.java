@@ -19,19 +19,19 @@ public class OremizerScreenHandler extends ScreenHandler {
     public final OremizerBlockEntity blockEntity;
 
     public OremizerScreenHandler(int syncId, PlayerInventory inventory, BlockPos pos) {
-        this(syncId, inventory, inventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(2));
+        this(syncId, inventory, inventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(3));
     }
 
     public OremizerScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
         super(ModScreenHandlers.OREMIZER_SCREEN_HANDLER, syncId);
-        checkSize((Inventory) blockEntity, 4);
+        checkSize((Inventory) blockEntity, 3);
         this.inventory = (Inventory) blockEntity;
         this.propertyDelegate = arrayPropertyDelegate;
         this.blockEntity = ((OremizerBlockEntity) blockEntity);
 
-        this.addSlot(new Slot(inventory, 0, 8, 62));
-        this.addSlot(new Slot(inventory, 1, 54, 34));
-        this.addSlot(new Slot(inventory, 2, 104, 34));
+        this.addSlot(new Slot(inventory, 0, 10, 35));
+        this.addSlot(new Slot(inventory, 1, 44, 35));
+        this.addSlot(new Slot(inventory, 2, 116, 35));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);

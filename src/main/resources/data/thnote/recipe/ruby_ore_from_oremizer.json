@@ -1,0 +1,14 @@
+{
+  "type": "thnote:oremizing",
+  "ingredient": [
+    {
+      "item": "minecraft:stone"
+    },
+    {
+      "item": "thnote:ruby"
+    }
+  ],
+  "result": {
+    "id": "thnote:ruby_ore"
+  }
+}

@@ -32,12 +32,11 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 public class OremizerBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory<BlockPos>, ImplementedInventory {
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(4, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
-    private static final int FLUID_ITEM_SLOT = 0;
-    private static final int INPUT_SLOT = 1;
+    private static final int INPUT_SLOT_A = 0;
+    private static final int INPUT_SLOT_B = 1;
     private static final int OUTPUT_SLOT = 2;
-    private static final int ENERGY_ITEM_SLOT = 3;
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
@@ -83,7 +82,7 @@ public class OremizerBlockEntity extends BlockEntity implements ExtendedScreenHa
 
     @Override
     public Text getDisplayName() {
-        return Text.translatable("gui.mccourse.oremizer");
+        return Text.translatable("thnote.gui.oremizer");
     }
 
     @Nullable
@@ -136,7 +135,7 @@ public class OremizerBlockEntity extends BlockEntity implements ExtendedScreenHa
     private void craftItem() {
         Optional<RecipeEntry<OremizerRecipe>> recipe = getCurrentRecipe();
 
-        this.removeStack(INPUT_SLOT, 1);
+        this.removeStack(INPUT_SLOT_B, 1);
         this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().value().output().getItem(),
                 this.getStack(OUTPUT_SLOT).getCount() + recipe.get().value().output().getCount()));
     }
@@ -166,7 +165,7 @@ public class OremizerBlockEntity extends BlockEntity implements ExtendedScreenHa
 
     private Optional<RecipeEntry<OremizerRecipe>> getCurrentRecipe() {
         return this.getWorld().getRecipeManager()
-                .getFirstMatch(ModRecipes.OREMIZER_TYPE, new OremizerRecipeInput(inventory.get(INPUT_SLOT)), this.getWorld());
+                .getFirstMatch(ModRecipes.OREMIZER_TYPE, new OremizerRecipeInput(inventory.get(INPUT_SLOT_B)), this.getWorld());
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {

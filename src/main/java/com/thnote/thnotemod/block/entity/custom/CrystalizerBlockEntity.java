@@ -6,7 +6,7 @@ import com.thnote.thnotemod.block.entity.ModBlockEntities;
 import com.thnote.thnotemod.recipe.crystalizer.CrystalizerRecipe;
 import com.thnote.thnotemod.recipe.crystalizer.CrystalizerRecipeInput;
 import com.thnote.thnotemod.recipe.ModRecipes;
-import com.thnote.thnotemod.screens.crystalizer.CrystallizerScreenHandler;
+import com.thnote.thnotemod.screens.crystalizer.CrystalizerScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -32,12 +32,10 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 public class CrystalizerBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory<BlockPos>, ImplementedInventory {
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(4, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
 
-    private static final int FLUID_ITEM_SLOT = 0;
-    private static final int INPUT_SLOT = 1;
-    private static final int OUTPUT_SLOT = 2;
-    private static final int ENERGY_ITEM_SLOT = 3;
+    private static final int INPUT_SLOT = 0;
+    private static final int OUTPUT_SLOT = 1;
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
@@ -45,7 +43,7 @@ public class CrystalizerBlockEntity extends BlockEntity implements ExtendedScree
     private final int DEFAULT_MAX_PROGRESS = 72;
 
     public CrystalizerBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.CRYSTALLIZER_BE, pos, state);
+        super(ModBlockEntities.CRYSTALIZER_BE, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             @Override
             public int get(int index) {
@@ -83,13 +81,13 @@ public class CrystalizerBlockEntity extends BlockEntity implements ExtendedScree
 
     @Override
     public Text getDisplayName() {
-        return Text.translatable("gui.mccourse.crystallizer");
+        return Text.translatable("thnote.gui.crystalizer");
     }
 
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return new CrystallizerScreenHandler(syncId, playerInventory, this, propertyDelegate);
+        return new CrystalizerScreenHandler(syncId, playerInventory, this, propertyDelegate);
     }
 
     @Override

@@ -6,6 +6,7 @@ import com.thnote.thnotemod.block.custom.OremizerBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.HopperBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -20,6 +21,7 @@ public class ModBlocks {
     public static final Block DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore", new Block(AbstractBlock.Settings.copy(Blocks.DEEPSLATE_IRON_ORE)));
     public static final Block CRYSTALIZER = registerBlock("crystalizer", new CrystalizerBlock(AbstractBlock.Settings.create().strength(2).requiresTool()));
     public static final Block OREMIZER = registerBlock("oremizer", new OremizerBlock(AbstractBlock.Settings.create().strength(2).requiresTool()));
+
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

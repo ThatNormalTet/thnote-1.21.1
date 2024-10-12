@@ -11,12 +11,12 @@ import net.minecraft.util.Identifier;
 
 public class ModRecipes {
     public static final RecipeSerializer<CrystalizerRecipe> CRYSTALIZER_SERIALIZER = Registry.register(
-            Registries.RECIPE_SERIALIZER, Identifier.of(Thnote.MOD_ID, "crystallizing"), new CrystalizerRecipe.Serializer());
+            Registries.RECIPE_SERIALIZER, Identifier.of(Thnote.MOD_ID, "crystalizing"), new CrystalizerRecipe.Serializer());
     public static final RecipeType<CrystalizerRecipe> CRYSTALIZER_TYPE = Registry.register(
-            Registries.RECIPE_TYPE, Identifier.of(Thnote.MOD_ID, "crystallizing"), new RecipeType<>() {
+            Registries.RECIPE_TYPE, Identifier.of(Thnote.MOD_ID, "crystalizing"), new RecipeType<>() {
                 @Override
                 public String toString() {
-                    return "crystallizing";
+                    return "crystalizing";
                 }
             });
 

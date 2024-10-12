@@ -1,0 +1,9 @@
+{
+  "type": "thnote:crystalizing",
+  "ingredient": {
+    "item": "thnote:deepslate_ruby_ore"
+  },
+  "result": {
+    "id": "thnote:ruby"
+  }
+}

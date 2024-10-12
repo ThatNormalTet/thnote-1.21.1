@@ -10,8 +10,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlockEntities {
-    public static final BlockEntityType<CrystalizerBlockEntity> CRYSTALLIZER_BE =
-            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(Thnote.MOD_ID, "crystallizer_be"),
+    public static final BlockEntityType<CrystalizerBlockEntity> CRYSTALIZER_BE =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(Thnote.MOD_ID, "crystalizer_be"),
                     BlockEntityType.Builder.create(CrystalizerBlockEntity::new, ModBlocks.CRYSTALIZER).build(null));
 
     public static final BlockEntityType<OremizerBlockEntity> OREMIZER_BE =

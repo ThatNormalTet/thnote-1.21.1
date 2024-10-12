@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 
 public class OremizerScreen extends HandledScreen<OremizerScreenHandler> {
     private static final Identifier GUI_TEXTURE =
-            Identifier.of(Thnote.MOD_ID, "textures/gui/crystalizer.png");
+            Identifier.of(Thnote.MOD_ID, "textures/gui/oremizer.png");
     private static final Identifier ARROW_TEXTURE =
             Identifier.of(Thnote.MOD_ID, "textures/gui/progress.png");
 
@@ -22,10 +22,6 @@ public class OremizerScreen extends HandledScreen<OremizerScreenHandler> {
     @Override
     protected void init() {
         super.init();
-
-        // Get rid of title and inventory title
-        titleY = 1000;
-        playerInventoryTitleY = 1000;
     }
 
     @Override

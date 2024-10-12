@@ -9,23 +9,19 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class CrystallizerScreen extends HandledScreen<CrystallizerScreenHandler> {
+public class CrystalizerScreen extends HandledScreen<CrystalizerScreenHandler> {
     private static final Identifier GUI_TEXTURE =
             Identifier.of(Thnote.MOD_ID, "textures/gui/crystalizer.png");
     private static final Identifier ARROW_TEXTURE =
             Identifier.of(Thnote.MOD_ID, "textures/gui/progress.png");
 
-    public CrystallizerScreen(CrystallizerScreenHandler handler, PlayerInventory inventory, Text title) {
+    public CrystalizerScreen(CrystalizerScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
 
     @Override
     protected void init() {
         super.init();
-
-        // Get rid of title and inventory title
-        titleY = 1000;
-        playerInventoryTitleY = 1000;
     }
 
     @Override
@@ -43,7 +39,7 @@ public class CrystallizerScreen extends HandledScreen<CrystallizerScreenHandler>
 
     private void renderProgressArrow(DrawContext context, int x, int y) {
         if(handler.isCrafting()) {
-            context.drawTexture(ARROW_TEXTURE, x + 73, y + 35, 0, 0,
+            context.drawTexture(ARROW_TEXTURE, x + 74, y + 35, 0, 0,
                     handler.getScaledArrowProgress(), 16, 24, 16);
         }
     }

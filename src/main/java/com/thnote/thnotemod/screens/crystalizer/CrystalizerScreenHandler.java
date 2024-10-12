@@ -13,25 +13,24 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.util.math.BlockPos;
 
-public class CrystallizerScreenHandler extends ScreenHandler {
+public class CrystalizerScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
     public final CrystalizerBlockEntity blockEntity;
 
-    public CrystallizerScreenHandler(int syncId, PlayerInventory inventory, BlockPos pos) {
+    public CrystalizerScreenHandler(int syncId, PlayerInventory inventory, BlockPos pos) {
         this(syncId, inventory, inventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(2));
     }
 
-    public CrystallizerScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
-        super(ModScreenHandlers.CRYSTALLIZER_SCREEN_HANDLER, syncId);
-        checkSize((Inventory) blockEntity, 4);
+    public CrystalizerScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
+        super(ModScreenHandlers.CRYSTALIZER_SCREEN_HANDLER, syncId);
+        checkSize((Inventory) blockEntity, 2);
         this.inventory = (Inventory) blockEntity;
         this.propertyDelegate = arrayPropertyDelegate;
         this.blockEntity = ((CrystalizerBlockEntity) blockEntity);
 
-        this.addSlot(new Slot(inventory, 0, 8, 62));
-        this.addSlot(new Slot(inventory, 1, 54, 34));
-        this.addSlot(new Slot(inventory, 2, 104, 34));
+        this.addSlot(new Slot(inventory, 0, 44, 35));
+        this.addSlot(new Slot(inventory, 1, 116, 35));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);

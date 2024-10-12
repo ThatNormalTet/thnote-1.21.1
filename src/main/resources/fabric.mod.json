@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"com.thnote.thnotemod.ThnoteClient"
+		],
+		"rei_client": [
+			"com.thnote.thnotemod.compat.ThNoTeModREIClient"
 		]
 	},
 	"mixins": [

@@ -101,6 +101,6 @@ public class CrystalizerBlock extends BlockWithEntity {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(type, ModBlockEntities.CRYSTALLIZER_BE, (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
+        return validateTicker(type, ModBlockEntities.CRYSTALIZER_BE, (world1, pos, state1, blockEntity) -> blockEntity.tick(world1, pos, state1));
     }
 }
