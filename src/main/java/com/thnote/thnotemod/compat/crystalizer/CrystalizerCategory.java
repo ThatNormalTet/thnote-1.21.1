@@ -2,6 +2,7 @@ package com.thnote.thnotemod.compat.crystalizer;
 
 import com.thnote.thnotemod.Thnote;
 import com.thnote.thnotemod.block.ModBlocks;
+import dev.architectury.platform.Mod;
 import me.shedaniel.math.Point;
 import me.shedaniel.math.Rectangle;
 import me.shedaniel.rei.api.client.gui.Renderer;
@@ -11,6 +12,7 @@ import me.shedaniel.rei.api.client.registry.display.DisplayCategory;
 import me.shedaniel.rei.api.common.category.CategoryIdentifier;
 import me.shedaniel.rei.api.common.display.basic.BasicDisplay;
 import me.shedaniel.rei.api.common.util.EntryStacks;
+import net.minecraft.block.Blocks;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 

@@ -1,10 +1,14 @@
 package com.thnote.thnotemod.datagen;
 
 import com.thnote.thnotemod.block.ModBlocks;
+import com.thnote.thnotemod.fluid.ModFluidBlocks;
+import com.thnote.thnotemod.fluid.ModFluids;
+import com.thnote.thnotemod.fluid.fluids.PotatoWaterFluid;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.FluidTags;
 
 import java.util.concurrent.CompletableFuture;
 

@@ -1,14 +1,10 @@
 package com.thnote.thnotemod.item;
 
 import com.thnote.thnotemod.Thnote;
+import com.thnote.thnotemod.fluid.ModFluids;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.component.type.AttributeModifiersComponent;
-import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolMaterials;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -18,6 +14,7 @@ public class ModItems {
     public static final Item RUBY = registerItem("ruby", new Item(new Item.Settings()));
     public static final Item CONDENSED_RUBY = registerItem("condensed_ruby", new Item(new Item.Settings()));
     public static final Item POTATO_RUBY = registerItem("potato_ruby", new Item(new Item.Settings()));
+    public static final Item POTATO_WATER_BUCKET = registerItem("potato_water_bucket", new BucketItem(ModFluids.STILL_POTATO_WATER, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(Thnote.MOD_ID, name), item);

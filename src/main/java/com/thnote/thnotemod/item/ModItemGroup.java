@@ -26,6 +26,7 @@ public class ModItemGroup {
                         entries.add(ModBlocks.DEEPSLATE_RUBY_ORE);
                         entries.add(ModBlocks.CRYSTALIZER);
                         entries.add(ModBlocks.OREMIZER);
+                        entries.add(ModItems.POTATO_WATER_BUCKET);
                     }).build());
 
     public static void registerItemGroup(){

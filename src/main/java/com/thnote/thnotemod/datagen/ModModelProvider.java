@@ -1,6 +1,7 @@
 package com.thnote.thnotemod.datagen;
 
 import com.thnote.thnotemod.block.ModBlocks;
+import com.thnote.thnotemod.fluid.ModFluidBlocks;
 import com.thnote.thnotemod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;

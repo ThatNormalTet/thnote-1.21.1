@@ -1,5 +1,6 @@
 package com.thnote.thnotemod;
 
+import com.thnote.thnotemod.fluid.FluidRenderer;
 import com.thnote.thnotemod.screens.ModScreenHandlers;
 import com.thnote.thnotemod.screens.crystalizer.CrystalizerScreen;
 import com.thnote.thnotemod.screens.oremizer.OremizerScreen;
@@ -11,5 +12,7 @@ public class ThnoteClient implements ClientModInitializer {
     public void onInitializeClient() {
         HandledScreens.register(ModScreenHandlers.CRYSTALIZER_SCREEN_HANDLER, CrystalizerScreen::new);
         HandledScreens.register(ModScreenHandlers.OREMIZER_SCREEN_HANDLER, OremizerScreen::new);
+
+        FluidRenderer.registerFluidRenderers();
     }
 }
